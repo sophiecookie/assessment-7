@@ -1,0 +1,36 @@
+Timing Information:
+-------------------
+
+Extra Large Array
+-----------------
+Time to run code with push(): 2.3032 ms
+Time to run code with unshift(): 644.0009 ms
+
+Large Array
+-----------
+Time to run code with push(): 411.6 μs
+Time to run code with unshift(): 6.4372 ms
+
+Medium Array
+------------
+Time to run code with push(): 100.4 μs
+Time to run code with unshift(): 147.5 μs
+
+Small Array
+-----------
+Time to run code with push(): 71.8 μs
+Time to run code with unshift(): 40 μs
+
+Tiny Array
+----------
+Time to run code with push(): 62.2 μs
+Time to run code with unshift(): 28.2 μs
+
+
+In general, as the array size grows from Tiny to Extra Large, the execution time of unshift() increases dramatically, while the push() method remains relatively stable. 
+This sugggests that the 'unshift()' method does not scale well and 'push()' has a better scalability.
+
+In JavaScript, the 'push()' method appends elements to the end of an array, while 'unshift()' inserts elements at the beginning.
+The 'unshift()' method requires shifting all existing elements to make room for the new element at the beginning, the time complexity is O(n).
+The 'push()' method adds elements to the end of the array, which has a time complexity of O(1).
+Therefore, push method is more efficient.
